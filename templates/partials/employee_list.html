@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="card-group">
+        {% for emp in employees %}
+                <div class="card">
+                    <span class="border border-5 ">
+                        <a href="{% url 'profile' pk=emp.id %}">
+                                <img src="{{ emp.image.url}}" class="card-img-top" alt="...">
+                            </a>
+                                <div class="card-body">
+                                <h5 class="card-title">{{ emp.full_name }}</h5>
+                                <p class="card-text">{{ emp.title }}</p>
+                                </div>
+                            <div class="card-footer">
+                        <small class="text-muted">{{ emp.departament }}</small>
+                        </div>
+                    </span>
+                </div>
+        {% endfor %}
+    </div>
+</div>

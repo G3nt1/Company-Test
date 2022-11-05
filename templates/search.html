@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    {% if error %}
+        <div class="alert alert-danger">{{ error }}</div>
+    {% else %}
+        {% include 'partials/employee_list.html' %}
+    {% endif %}
+{% endblock %}
